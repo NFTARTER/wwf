@@ -1,5 +1,13 @@
 /* 반응형 조건 responsive */
 /* m(320~) -> t(1024~) -> d(1250~) */
+@media screen and (min-width:550px) {
+    /* ------------------------------2행 퀴즈 */
+    #wrap .quiz_bg .quiz {
+        flex-flow:row nowrap;}/* t, d column -> row */
+    #wrap .quiz_bg .quiz .quiz_list {width: 200px;}
+    #wrap .quiz_bg .quiz .quiz_status {flex: 1;}
+    }
+
 @media screen and (min-width:860px) {
     #wrap .intro {padding:300px 0 100px;}
 }/* 860-1023 */
@@ -23,6 +31,26 @@
     }
     #wrap .intro .sponsor_btn em {font-size: 1.38rem;}
     #wrap .intro .sponsor_btn::after {font-size: 1rem;}
+    /* --------------------------------2행 퀴즈 */
+    #wrap .quiz_bg .quiz .quiz_list {width: 400px;}
+    #wrap .quiz_bg .quiz .quiz_list h1 {
+        font-size: 2.5rem; 
+    }
+    #wrap .quiz_bg .quiz .quiz_list h2 span {
+        font-size: 1.25rem; 
+    }
+    #wrap .quiz_bg .quiz .quiz_list #check_answer {
+    background-color: #050505;
+    border-radius: 50px; 
+    color: #fff;
+    width: 115%;
+    padding: 14px;
+    line-height: 1.7;
+    }
+    #wrap .quiz_bg .quiz .quiz_list {
+    margin-bottom: 16px;
+    }
+    #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li label {background-size: 28px; display: block; line-height: 2;}
 }/* 1024~ */
 
 @media screen and (min-width:1250px) {
@@ -48,4 +76,26 @@
     }
     #wrap .intro .sponsor_btn em {font-size: 2.13rem;}
     #wrap .intro .sponsor_btn::after {font-size: 2rem;}
+    /* =============================== 2행 퀴즈 */
+    #wrap .quiz_bg .quiz .quiz_list {width: 400px;}
+    #wrap .quiz_bg .quiz .quiz_list h1 {
+        font-size: 3.44rem; 
+    }
+    #wrap .quiz_bg .quiz .quiz_list h2 span {
+        font-size: 2.13rem; 
+    }
+    #wrap .quiz_bg .quiz .quiz_list #check_answer {
+    background-color: #050505;
+    border-radius: 50px; 
+    color: #fff;
+    width: 115%;
+    padding: 14px;
+    line-height: 1.7;
+    }
+    #wrap .quiz_bg .quiz .quiz_list {
+    margin-bottom: 16px;
+    }
+    #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li label {}
 }/* 1250~max */
+/* background image 키우면 label(인라인)도 같이 키워서 line-height등으로
+키워도 잘리지 않게 */
