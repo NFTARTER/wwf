@@ -5,17 +5,32 @@
 }
 #wrap .container {
     min-width:320px;
+    background-position: center; background-size: cover;
+    padding: 70px 15px;
 }
 #wrap .container .contents {max-width: 1250px; margin: 0 auto;}
+#wrap .container .contents h1 {
+    font-size: 1.38rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 40px;
+}
+#wrap .container .contents h1 .highlight {
+    background-color: #fff;
+    color: black;
+    font-weight: 500;
+}
+#wrap .container .contents h1+p {
+    margin:0 0 22px;
+    font-size: 0.81rem;
+    font-weight: 500;
+    line-height: 1.7;
+}
 /* mobile design - .sponser_btn */
 #wrap .container .sponsor_btn {
     width: 164px; height: 41px;
     background: linear-gradient(#FE9300, #FF7300);
     border-radius: 37.5px;
-    display: flex; flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
 }
 #wrap .container .sponsor_btn:hover {
     animation: color 1s linear alternate;

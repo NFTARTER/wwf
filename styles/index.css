@@ -5,10 +5,6 @@
     background-position: center, bottom;
     background-size: auto 130%;
     position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     padding: 100px 15px;
 }
 #wrap .intro::after {
@@ -52,8 +48,6 @@
 #wrap .quiz_bg {
     background-image: url(../images/quiz_bg.png);
     background-size: 100%;
-    background-position: center, bottom;
-    background-size: cover;
     position: relative;
     padding: 70px;
     margin: 0 auto;
@@ -130,3 +124,147 @@
 }
 #wrap .quiz_bg .quiz .quiz_status img {width:100%; margin-bottom: 20px; }
 #wrap .quiz_bg .quiz .quiz_status p {color: #fff; font-size: 1.25rem; font-weight: 200; text-align: center;}
+/* ==============================================3 */
+#wrap .video_bg {
+    background-image: url(../images/video_bg.png);
+    padding: 50px 15px;
+}
+#wrap .video_bg .video h1 {text-align: center;}
+#wrap .video_bg .video iframe {width: 100%; margin: 0 0 70px;}
+/* ==============================================4 */
+#wrap .reduction_bg {
+    background-image: url(../images/decline_50_bg.png);
+}
+#wrap .reduction_bg .reduction h1 {color: #fff;}
+#wrap .reduction_bg .reduction h1+p {color: #fff;}
+#wrap .reduction_bg .reduction p img {width: 100%;}
+/* ==============================================5 */
+#wrap .humanity_bg {
+    background-color: #f5f5f5;
+}
+#wrap .humanity_bg h1 {text-align: center;}
+#wrap .humanity_bg .humanity h1+p {text-align: center;}
+#wrap .humanity_bg .humanity .list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    /* display: grid; grid-template-rows: 1fr 1fr 1fr; */
+}
+#wrap .humanity_bg .humanity .list li {}
+#wrap .humanity_bg .humanity .list li {
+    background-color: white;
+}
+#wrap .humanity_bg .humanity .list li:nth-child(3) {
+}
+#wrap .humanity_bg .humanity .list li dl {background-size: cover; background-position: center; position: relative;}
+#wrap .humanity_bg .humanity .list li dl * {color: #fff; position: relative; z-index: 10;}
+#wrap .humanity_bg .humanity .list li:nth-child(1) dl {
+    background-image: url(../images/warming_28t.png);
+    background-size: center;
+    background-position: 100%;
+    padding-top: 48px;
+    padding-bottom: 38px;
+}
+#wrap .humanity_bg .humanity .list li:nth-child(2) dl {
+    background-image: url(../images/warming_27cm.png);
+    background-position: 100%;
+    background-size: center;
+    padding-top: 48px;
+    padding-bottom: 38px;
+    background: linear-gradient(black,rgb(110, 110, 110),0.825);
+}
+#wrap .humanity_bg .humanity .list li:nth-child(3) dl {
+    background-image: url(../images/protest_3mil.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 48px;
+    padding-bottom: 38px;
+}
+#wrap .humanity_bg .humanity .list li dl::before {
+    content: ''; display: block; width:100%; height:100%;
+    position: absolute; left:0; top:0; z-index:9 ; background:linear-gradient(rgba(0,0,0,0.9), transparent) ;
+}
+#wrap .humanity_bg .humanity .list li dl dt {
+    color: #fff;
+    font-size: 1.38rem;
+    margin-bottom: 11px;
+    line-height: 1.2;
+}
+#wrap .humanity_bg .humanity .list li dl dd {
+    font-size: 1rem;
+    color: #fff;
+}
+#wrap .humanity_bg .humanity .list li .txt {
+    padding: 20px;
+}
+#wrap .humanity_bg .humanity .list li .txt p {
+    font-size: 0.813rem;
+    line-height: 1.7;
+}
+/* ==============================================6 */
+#wrap .crisis_bg {
+    background-image: url(../images/decline_50_bg.png);
+}
+#wrap .crisis_bg .crisis h1 {color: #fff;}
+#wrap .crisis_bg .crisis h1+p {color: #fff;} 
+#wrap .crisis_bg .crisis p img {width: 100%;}
+/* ===========================================7 */
+#wrap .wwf_bg {
+    background-image: url(../images/protest_3mil.jpg);
+    position: relative;
+}
+#wrap .wwf_bg::before {position: absolute; content: ''; display: block;
+    width:100%; height: 100%; left: 0; top: 0; z-index: index 9;;
+    background: rgba(255, 255, 255, 0.7);
+
+}
+#wrap .wwf_bg .wwf {
+    position: relative; z-index: 10; text-align: center;
+}
+#wrap .wwf_bg .wwf h1 {
+    font-size: 1.875rem; font-weight: 600;
+}
+#wrap .wwf_bg .wwf p:nth-child(1) {}
+#wrap .wwf_bg .wwf p:nth-child(2) {}
+#wrap .wwf_bg .wwf h1,
+#wrap .wwf_bg .wwf p:nth-child(1),
+#wrap .wwf_bg .wwf p:nth-child(2) {
+}
+/* -------------------------------------------8행 */
+#wrap .activity_bg {}
+#wrap .activity_bg .activity {}
+#wrap .activity_bg .activity h1 {text-align: center; line-height: 1.2; font-size: 1.375rem;} 
+#wrap .activity_bg .activity .details {
+    display: grid; 
+    grid-template-areas: 
+    'public'
+    'corporation'
+    'nature';
+    gap: 22px;
+}
+#wrap .activity_bg .activity .details li {
+    background-position: center;
+    background-size: cover;
+    padding-top: 94px;
+}
+#wrap .activity_bg .activity .details li:nth-child(1) {
+    grid-area: public; /* 대중-grid 2차원 정렬을 위한 자식 이름 짓기(대중) */
+    background-image: url(../images/warming_28t.png);
+}
+#wrap .activity_bg .activity .details li:nth-child(2) {
+    grid-area: corporation;/* 기업 */
+    background-image: url(../images/protest_3mil.jpg);
+}
+#wrap .activity_bg .activity .details li:nth-child(3) {
+    grid-area: nature;/* 자연 */
+    background-image: url(../images/decline_50.png);
+}
+#wrap .activity_bg .activity .details .txt {
+    padding: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.452)) transparent;
+}
+#wrap .activity_bg .activity .details .txt dt {font-size: 1.375rem; margin-bottom: 18px; color: #fff;}
+#wrap .activity_bg .activity .details .txt dd {font-size: 0.813rem; color: #fff; line-height: 1.7;}

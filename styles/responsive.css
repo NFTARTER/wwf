@@ -9,7 +9,33 @@
     }
 
 @media screen and (min-width:860px) {
-    #wrap .intro {padding:300px 0 100px;}
+    #wrap .intro {padding:200px 80px;}
+    /* ---------------------------3행~6행 공통 */
+    #wrap .container .contents h1 {font-size: 2.5rem; margin: 0 0 40px;}
+    #wrap .container .contents h1+p {font-size: 1.38rem;}
+    /* ----------------------------3행 */
+    #wrap .video_bg .video h1 {margin:0 0 70px;}
+    #wrap .video_bg .video iframe {height: 484px;}
+    /* ---------------------------5행 */
+    #wrap .humanity_bg .humanity .list {flex-flow: row nowrap;}
+    #wrap .humanity_bg .humanity .list li {flex: 1;}
+    #wrap .humanity_bg .humanity .list li .txt p {font-size: 1rem; line-height: 1.7;}
+    #wrap .humanity_bg .humanity .list li dl dt {
+    color: #fff;
+    font-size: 2.69rem;
+    font-weight: 600;
+    }
+    #wrap .humanity_bg .humanity .list li:nth-child(1) dl {
+        padding-bottom: 182px;
+    }
+    #wrap .humanity_bg .humanity .list li:nth-child(2) dl {
+        padding-bottom: 182px;
+    }
+    #wrap .humanity_bg .humanity .list li:nth-child(3) dl {
+        padding-bottom: 182px;
+    }
+    #wrap .humanity_bg .humanity .list li .txt {height: 250px;}
+    #wrap .container .contents h1+p {margin:0 0 40px; font-size: 1rem;}
 }/* 860-1023 */
 @media screen and (min-width:1024px) {
     #wrap .intro {
@@ -51,6 +77,7 @@
     margin-bottom: 16px;
     }
     #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li label {background-size: 28px; display: block; line-height: 2;}
+    /* ------------------------------------------8행 */
 }/* 1024~ */
 
 @media screen and (min-width:1250px) {
@@ -96,6 +123,58 @@
     margin-bottom: 16px;
     }
     #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li label {}
-}/* 1250~max */
+    /* --------------------------5행 */
+    #wrap .intro {padding:200px 80px;}
+    /* ---------------------------3행~6행 공통 */
+    #wrap .container .contents h1 {font-size: 2.5rem; margin: 0 0 40px;}
+    #wrap .container .contents h1+p {font-size: 1.38rem;}
+    /* ----------------------------3행 */
+    #wrap .video_bg .video h1 {margin:0 0 70px;}
+    #wrap .video_bg .video iframe {height: 484px;}
+    /* ---------------------------5행 */
+    #wrap .humanity_bg .humanity .list {flex-flow: row nowrap;}
+    #wrap .humanity_bg .humanity .list li {flex: 1;}
+    #wrap .humanity_bg .humanity .list li .txt p {font-size: 1rem; line-height: 1.7;}
+    #wrap .humanity_bg .humanity .list li dl dt {
+    color: #fff;
+    font-size: 2.69rem;
+    font-weight: 600;
+    }
+    #wrap .humanity_bg .humanity .list li:nth-child(1) dl {
+        padding-bottom: 182px;
+    }
+    #wrap .humanity_bg .humanity .list li:nth-child(2) dl {
+        padding-bottom: 182px;
+    }
+    #wrap .humanity_bg .humanity .list li:nth-child(3) dl {
+        padding-bottom: 182px;
+    }
+    #wrap .humanity_bg .humanity .list li .txt {height: 250px;}
+    #wrap .container .contents h1+p {margin:0 0 55px; font-size: 1rem;}
+    /* -----------------------------------------------8행 */
+    #wrap .activity_bg .activity .details {
+        grid-template-areas: 
+        'public nature'
+        'corporation nature';
+        grid-template-columns: 1fr 1fr;
+    }
+    #wrap .activity_bg .activity .details li {
+        background-position: center;
+        background-size: cover;
+        position: relative ;  
+        padding-bottom: 30px;
+    }
+    #wrap .activity_bg .activity .details li:last-child .txt {position: absolute; left: 0; bottom:31px ;}
+    #wrap .activity_bg {
+        
+    }
+    #wrap .activity_bg .activity .details .txt {
+        background: linear-gradient(rgba(0, 0, 0, 0.452)) transparent;
+        width: 50%;
+    }
+    #wrap .activity_bg .activity .details .txt dt {font-size: 2.13rem; margin-bottom: 18px; color: #fff;}
+    #wrap .activity_bg .activity .details .txt dd {font-size: 0.813rem; color: #fff; line-height: 1.7;}
+}
+    /* 1250~max */
 /* background image 키우면 label(인라인)도 같이 키워서 line-height등으로
 키워도 잘리지 않게 */
