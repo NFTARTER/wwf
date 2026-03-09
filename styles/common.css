@@ -31,29 +31,13 @@
     width: 164px; height: 41px;
     background: linear-gradient(#FE9300, #FF7300);
     border-radius: 37.5px;
-}
-#wrap .container .sponsor_btn:hover {
-    animation: color 1s linear alternate;
-    background: #fff;
-}
-#wrap .container .sponsor_btn em:hover {
-    color: #FF7300;
+    padding: 12.5px 21.5px;
+    margin: 0 auto;
+    display: flex;
 }
 #wrap .container .sponsor_btn::after {
-    content:'>'; display: block; color: white; font-size: 0.75rem;
-}
-#wrap .container .sponsor_btn:hover::after {
-    color: #FF7300;
+    content:'>'; color: white; font-size: 0.75rem; margin-right: 10px;
 }
 #wrap .container .sponsor_btn em {
     color: white; font-weight: 500;
-    margin-right: 10px;
-}
-@keyframes color {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.05)
-    }
 }
