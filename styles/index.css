@@ -4,42 +4,36 @@
     background-image: url(../images/warming_27cm.png);
     background-position: center, bottom;
     background-size: auto 130%;
-    position: relative;
+    position: relative; z-index: 50;
     padding: 100px 15px;
 }
+#wrap .intro > * {position:relative; z-index: 52;}
 #wrap .intro::after {
     /* 북극곰배경 위에 깔리는 반투명한 검은색배경 rgba() */
     content:''; display: block;
     background: linear-gradient(transparent, #000 69%);
     opacity: 0.6;
     width: 100%; height: 100%;
+    z-index:51;
     position: absolute; left: 0; top: 0;
 }
 #wrap .container .logo {
     position: absolute;
     width: 24px;
-    top: 10px; left: 10px;
+    top: 21px; left: 15px;
 } /* w,h 중 한가지값만 작성(나머지는 자동비율조정) */
 #wrap .intro .logo img {width:100%}
-#wrap .intro h1,
-#wrap .intro .sponsor_btn {
-    z-index: 999;
-}
 #wrap .intro span {
     font-size: 1.875rem;
     color: white;
     line-height: 1.3;
     font-weight: 500;
+    display: block;
 }
 #wrap .intro h1 {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    font-size: 1.875rem;
-    color: white;
-    margin-bottom: 50px;
+    text-align: center; margin: 0 0 50px;
 }
-#wrap .intro span {
+#wrap .intro h1 span {
 
 }
 #wrap .intro span:nth-child(2) {}
@@ -47,18 +41,15 @@
 /* ============================2행 퀴즈 */
 #wrap .quiz_bg {
     background-image: url(../images/quiz_bg.png);
-    background-size: 100%;
-    position: relative;
     padding: 70px;
-    margin: 0 auto;
 }
 #wrap .quiz_bg .quiz {
     display: flex;
     flex-flow: column nowrap;/* t, d column -> row */
     gap: 50px;
 }
-#wrap .quiz_bg .quiz .quiz_list {
-    
+#wrap .quiz_bg .quiz .quiz_list > * {
+    margin: 0 0 16px;
 }
 /* #wrap .quiz_bg .quiz .quiz_list > * {margin: 0 0 16px;} */
 #wrap .quiz_bg .quiz .quiz_list h1 {
@@ -75,22 +66,16 @@
     /* font-family: "notosans"; */
 }
 #wrap .quiz_bg .quiz .quiz_list #quiz_frm {
-
+    margin: 0;
 }
 #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container {
-    margin-bottom: 16px;
+    margin: 0 0 16px;
 }
-#wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li:nth-child(1),
-#wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li:nth-child(2),
-#wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li:nth-child(3) {
-    margin-bottom: 10px;
+#wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li{
+    margin: 0 0 16px; position: relative;
 }
 #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li #thirty {
 }
-#wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li {
-    margin-bottom: 20px;
-}
-
 #wrap .quiz_bg .quiz .quiz_list #check_answer {
     background-color: #050505;
     border-radius: 50px;
@@ -100,6 +85,7 @@
     line-height: 1.7;
     margin-bottom: 50px; 
 }
+#wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li:last-child {margin: 0;}
 #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li input {display: none;}
 #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li input:checked + label {
     background-image: url(../images/chk_on.svg);
@@ -107,6 +93,7 @@
 #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li label {
     color:#ffffff; font-size: 0.88rem; background-image: url(../images/chk_off.svg);
     background-size:16px; background-repeat: no-repeat; padding-left: 47.75px ;
+    background-position: left center;
 }
 #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li:hover::after {
     content:''; display: block; position: absolute; left: 0; bottom: -10px; width: 100%;
@@ -114,23 +101,25 @@
 }
 #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li:hover label {
     color: aquamarine;
-
 }
 #wrap .quiz_bg .quiz .quiz_list #check_answer:hover {
     background-color: rgb(70, 146, 146);
 }
-#wrap .quiz_bg .quiz .quiz_status {
-
+#wrap .quiz_bg .quiz .quiz_status {}
+#wrap .quiz_bg .quiz .quiz_list #quiz_frm #check_answer {
+    width: 100%; padding: 10px; color: #fff; line-height: 1.7; background-color: #000;
+    padding: 10px; border-radius: 50px; width: 100%; transition: background-color 0.3s;
 }
-#wrap .quiz_bg .quiz .quiz_status img {width:100%; margin-bottom: 20px; }
-#wrap .quiz_bg .quiz .quiz_status p {color: #fff; font-size: 1.25rem; font-weight: 200; text-align: center;}
+
+#wrap .quiz_bg .quiz .quiz_status img {width:100%;}
+#wrap .quiz_bg .quiz .quiz_status p {color: #fff; font-size: 1.25rem; margin: 20px 0 0; line-height: 1.7;}
 /* ==============================================3 */
 #wrap .video_bg {
     background-image: url(../images/video_bg.png);
     padding: 50px 15px;
 }
 #wrap .video_bg .video h1 {text-align: center;}
-#wrap .video_bg .video iframe {width: 100%; margin: 0 0 70px;}
+#wrap .video_bg .video iframe {width: 100%; height: 231px; margin: 0 0 70px;}
 /* ==============================================4 */
 #wrap .reduction_bg {
     background-image: url(../images/decline_50_bg.png);
@@ -142,67 +131,48 @@
 #wrap .humanity_bg {
     background-color: #f5f5f5;
 }
-#wrap .humanity_bg h1 {text-align: center;}
+#wrap .humanity_bg .humanity h1 {text-align: center;}
 #wrap .humanity_bg .humanity h1+p {text-align: center;}
 #wrap .humanity_bg .humanity .list {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     gap: 20px;
     /* display: grid; grid-template-rows: 1fr 1fr 1fr; */
 }
 #wrap .humanity_bg .humanity .list li {}
-#wrap .humanity_bg .humanity .list li {
-    background-color: white;
-}
-#wrap .humanity_bg .humanity .list li:nth-child(3) {
-}
-#wrap .humanity_bg .humanity .list li dl {background-size: cover; background-position: center; position: relative;}
+#wrap .humanity_bg .humanity .list li:nth-child(3) {}
+#wrap .humanity_bg .humanity .list li dl {background-size: cover; background-position: center; position: relative;
+    text-align: center; padding: 48px 0;}
 #wrap .humanity_bg .humanity .list li dl * {color: #fff; position: relative; z-index: 10;}
 #wrap .humanity_bg .humanity .list li:nth-child(1) dl {
     background-image: url(../images/warming_28t.png);
-    background-size: center;
-    background-position: 100%;
-    padding-top: 48px;
-    padding-bottom: 38px;
 }
 #wrap .humanity_bg .humanity .list li:nth-child(2) dl {
     background-image: url(../images/warming_27cm.png);
-    background-position: 100%;
-    background-size: center;
-    padding-top: 48px;
-    padding-bottom: 38px;
-    background: linear-gradient(black,rgb(110, 110, 110),0.825);
 }
 #wrap .humanity_bg .humanity .list li:nth-child(3) dl {
     background-image: url(../images/protest_3mil.jpg);
-    background-position: center;
-    background-size: cover;
-    padding-top: 48px;
-    padding-bottom: 38px;
 }
 #wrap .humanity_bg .humanity .list li dl::before {
     content: ''; display: block; width:100%; height:100%;
     position: absolute; left:0; top:0; z-index:9 ; background:linear-gradient(rgba(0,0,0,0.9), transparent) ;
 }
 #wrap .humanity_bg .humanity .list li dl dt {
-    color: #fff;
     font-size: 1.38rem;
-    margin-bottom: 11px;
+    margin: 0 0 11px;
     line-height: 1.2;
+    font-weight: 400;
 }
 #wrap .humanity_bg .humanity .list li dl dd {
-    font-size: 1rem;
-    color: #fff;
+    line-height: 1.7;
 }
 #wrap .humanity_bg .humanity .list li .txt {
-    padding: 20px;
+    padding: 20px; background-color: #fff;
 }
 #wrap .humanity_bg .humanity .list li .txt p {
     font-size: 0.813rem;
     line-height: 1.7;
+    text-align: center;
 }
 /* ==============================================6 */
 #wrap .crisis_bg {
@@ -217,7 +187,7 @@
     position: relative;
 }
 #wrap .wwf_bg::before {position: absolute; content: ''; display: block;
-    width:100%; height: 100%; left: 0; top: 0; z-index: index 9;;
+    width:100%; height: 100%; left: 0; top: 0; z-index: 9;
     background: rgba(255, 255, 255, 0.7);
 
 }
@@ -229,14 +199,15 @@
 }
 #wrap .wwf_bg .wwf p:nth-child(1) {}
 #wrap .wwf_bg .wwf p:nth-child(2) {}
+#wrap .wwf_bg .wwf p {line-height: 1.7; font-size: 0.82rem;}
 #wrap .wwf_bg .wwf h1,
 #wrap .wwf_bg .wwf p:nth-child(1),
 #wrap .wwf_bg .wwf p:nth-child(2) {
 }
 /* -------------------------------------------8행 */
-#wrap .activity_bg {}
+#wrap .activity_bg {padding: 70px 15px;}
 #wrap .activity_bg .activity {}
-#wrap .activity_bg .activity h1 {text-align: center; line-height: 1.2; font-size: 1.375rem;} 
+#wrap .activity_bg .activity h1 {text-align: center; line-height: 1.2; font-size: 1.375rem; font-weight: 500;} 
 #wrap .activity_bg .activity .details {
     display: grid; 
     grid-template-areas: 
@@ -262,52 +233,52 @@
     grid-area: nature;/* 자연 */
     background-image: url(../images/decline_50.png);
 }
-#wrap .activity_bg .activity .details .txt {
+#wrap .activity_bg .activity .details li .txt {
     padding: 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.452)) transparent;
+    background: linear-gradient(rgba(0, 0, 0, 0.452));
 }
-#wrap .activity_bg .activity .details .txt dt {font-size: 1.375rem; margin-bottom: 18px; color: #fff;}
-#wrap .activity_bg .activity .details .txt dd {font-size: 0.813rem; color: #fff; line-height: 1.7;}
+#wrap .activity_bg .activity .details li .txt * {color: #fff;}
+#wrap .activity_bg .activity .details .txt dt {font-size: 1.375rem; margin: 0 0 18px;}
+#wrap .activity_bg .activity .details .txt dd {font-size: 0.813rem; line-height: 1.7;}
 /* =====================================9행 감사선물 */
-#wrap .regular_bg {
-    background-image: url(../images/decline_50_bg.png);
-}
-#wrap .regular_bg .regular {
-    display: block; 
-}
-#wrap .regular_bg .regular #donation_txt {margin-bottom: 60px;}
-#wrap .regular_bg .regular #donation_txt h2 {
-    color: #fff; line-height: 1.2; font-size: 1.375rem;
-    margin-bottom: 22px;
-}
-#wrap .regular_bg .regular #donation_txt .sponsor_btn {
-    font-size: 1.375rem; margin:0; width:270px; height: 62px; display: flex; 
-    flex-flow:row nowrap; justify-content: center; align-items: center;
-} 
-#wrap .container .sponsor_btn::after {
-    content:'>'; color: white; font-size: 1.38rem;
-}
-#wrap .regular_bg .regular #donation_txt .sponsor_btn em {
-    margin-right: 10px; 
-}
-#wrap .regular_bg .regular .donation #donation_list {display: grid;
+#wrap .regular_bg {background-image: url(../images/decline_50_bg.png);}
+#wrap .regular_bg .regular {text-align: center;}
+#wrap .regular_bg .regular .donation_txt {display: flex; flex-flow: column nowrap;}
+#wrap .regular_bg .regular .donation_txt h2 {margin: 0 0 40px; text-align: left; color: #fff;
+    font-size: 1.38rem;
+    font-weight: 500;
+    line-height: 1.2;}
+#wrap .regular_bg .regular .donation_txt .sponsor_btn {margin: 0;}
+#wrap .regular_bg .regular .donation_txt .sponsor_btn em {}
+#wrap .regular_bg .regular .donation_list {
+    display: grid; gap: 20px;
     grid-template-areas: 
-    'sponser2'
-    'sponser3'
-    'sponser4'}
-#wrap .regular_bg .regular #donation_list .donation:nth-child(1) {grid-area:sponser2;}
-#wrap .regular_bg .regular #donation_list .donation:nth-child(2) {grid-area:sponser3;}
-#wrap .regular_bg .regular #donation_list .donation:nth-child(3) {grid-area:sponser4;}
-#wrap .regular_bg .regular #donation_list .donation .photo {
-    height: 150px;
-    overflow: hidden;
+        'sponser2'
+        'sponser3'
+        'sponser5';
+    margin: 40px 0;
 }
-#wrap .regular_bg .regular #donation_list .donation {}
-#wrap .regular_bg .regular #donation_list .donation .photo img {width: 100%;}
-#wrap .regular_bg .regular #donation_list .donation h3 {color: #fff; line-height: 1.7; text-align: center; margin-bottom: 22px; margin-top: 13px; }
-#wrap .regular_bg .regular p {font-size: 1rem; background-color:#fff;  line-height: 1.7; text-align: center;}
+#wrap .regular_bg .regular .donation_list li {}
+#wrap .regular_bg .regular .donation_list li:nth-child(1) {grid-area: sponser2;}
+#wrap .regular_bg .regular .donation_list li:nth-child(2) {grid-area: sponser3;}
+#wrap .regular_bg .regular .donation_list li:nth-child(3) {grid-area: sponser5;}
+#wrap .regular_bg .regular .donation_list li:nth-child(2) .photo {background-image: url(../images/freebie2.jpg);}
+#wrap .regular_bg .regular .donation_list li:nth-child(3) .photo {background-image: url(../images/freebie3.jpg);}
+#wrap .regular_bg .regular .donation_list li .photo {
+    height: 150px; overflow: hidden;
+    background-position: center; background-size: cover;
+}
+#wrap .regular_bg .regular .donation_list li .photo img {width: 100%; transform: translateY(-110px);}/* 1열 */
+#wrap .regular_bg .regular .donation_list li h3 {margin-top: 13px;}
+#wrap .regular_bg .regular .donation_list li h3+p {}
+#wrap .regular_bg .regular .donation_list li h3,
+#wrap .regular_bg .regular .donation_list li h3+p {text-align: center; color: #fff; line-height: 1.7;}
+#wrap .regular_bg .regular .info {
+    background-color: #fff; color: #050505;
+    display: inline-block; padding: 5px 0;
+}
 /* ======================================10행 결제안내 */
-#wrap .guides_bg {margin-bottom: 70px; background-color: #f5f5f5;} 
+#wrap .guides_bg {background-color: #f5f5f5;} 
 #wrap .guides_bg .guides {}
-#wrap .guides_bg .guides h2 {font-size: 1.375rem; font-weight: 600; padding-bottom: 10px;}
-#wrap .guides_bg .guides ul li {font-size: 1rem; line-height:1.7;}
+#wrap .guides_bg .guides h2 {font-size: 1.375rem; font-weight: 600; padding-bottom: 10px; line-height: 1.2;}
+#wrap .guides_bg .guides ul li {line-height:1.7;}

@@ -4,40 +4,57 @@
     /* ------------------------------2행 퀴즈 */
     #wrap .quiz_bg .quiz {
         flex-flow:row nowrap;}/* t, d column -> row */
-    #wrap .quiz_bg .quiz .quiz_list {width: 200px;}
-    #wrap .quiz_bg .quiz .quiz_status {flex: 1;}
+    #wrap .quiz_bg .quiz > * {flex: 1;}
     }
 
 @media screen and (min-width:860px) {
-    #wrap .intro {padding:200px 80px;}
+    #wrap .intro {padding:300px 0 100px;}
     /* ---------------------------3행~6행 공통 */
+    #wrap .container {padding: 200px 80px;}
     #wrap .container .contents h1 {font-size: 2.5rem; margin: 0 0 40px;}
-    #wrap .container .contents h1+p {font-size: 1.38rem;}
+    #wrap .container .contents h1+p {font-size: 1.38rem; font-weight: 600; margin: 0 0 40px;}
     /* ----------------------------3행 */
     #wrap .video_bg .video h1 {margin:0 0 70px;}
     #wrap .video_bg .video iframe {height: 484px;}
     /* ---------------------------5행 */
+    #wrap .humanity_bg .humanity h1+p {font-size: 1rem; font-weight: 400;}
     #wrap .humanity_bg .humanity .list {flex-flow: row nowrap;}
     #wrap .humanity_bg .humanity .list li {flex: 1;}
-    #wrap .humanity_bg .humanity .list li .txt p {font-size: 1rem; line-height: 1.7;}
-    #wrap .humanity_bg .humanity .list li dl dt {
-    color: #fff;
-    font-size: 2.69rem;
-    font-weight: 600;
-    }
-    #wrap .humanity_bg .humanity .list li:nth-child(1) dl {
-        padding-bottom: 182px;
-    }
-    #wrap .humanity_bg .humanity .list li:nth-child(2) dl {
-        padding-bottom: 182px;
-    }
-    #wrap .humanity_bg .humanity .list li:nth-child(3) dl {
-        padding-bottom: 182px;
-    }
+    #wrap .humanity_bg .humanity .list li dl {height: 320px;}
+    #wrap .humanity_bg .humanity .list li dl dt {font-size: 2.69rem;}
     #wrap .humanity_bg .humanity .list li .txt {height: 250px;}
-    #wrap .container .contents h1+p {margin:0 0 40px; font-size: 1rem;}
-}/* 860-1023 */
-@media screen and (min-width:1024px)
+    #wrap .humanity_bg .humanity .list li .txt p {font-size: 1rem;}
+}
+@media screen and (min-width:680px) {
+    #wrap .intro {padding: 410px 0 100px;}
+    #wrap .intro .logo {width: 32px; left: 36px; top: 30px;}
+    #wrap .intro h1 {margin: 0 0 100px;}
+    #wrap .intro h1 span {font-size: 3.13rem; font-weight: 600;}
+    #wrap .container .sponsor_btn {width: 238px; height: 60px;}
+    #wrap .container .sponsor_btn em {font-size: 1.38rem;}
+    #wrap .container .sponsor_btn::after {font-size: 1rem;}
+    /* ---------------------------------------------------2행 퀴즈 */
+    #wrap .quiz_bg {padding: 150px 80px;}
+    #wrap .quiz_bg .quiz .quiz_list h1 {
+        font-size: 2.50rem; margin: 0 0 60px; text-align: center;
+    }
+    #wrap .quiz_bg .quiz .quiz_list h2 span {display: inline; font-size: 1.25rem;}
+    #wrap .quiz_bg .quiz .quiz_list #quiz_frm ul li {margin: 0 0 30px;}
+    #wrap .quiz_bg .quiz .quiz_list #quiz_frm ul li:last-child {margin: 0 0 40px;}
+    #wrap .quiz_bg .quiz .quiz_list #quiz_frm ul li label {
+        font-size: 1.25rem; background-size: 28px;
+    }
+    #wrap .quiz_bg .quiz_status p {text-align: right;}
+        /* -------------------------9행 */
+    #wrap .regular_bg .regular .donation_txt {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    }
+    #wrap .regular_bg .regular .donation_txt h2 {font-size: 2rem;}
+}
+/* 860-1023 */
+@media screen and (min-width:1024px) {
     #wrap .intro {
         padding: 410px 0 100px;
     }
@@ -78,149 +95,83 @@
     }
     #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li label {background-size: 28px; display: block; line-height: 2;}
     /* ------------------------------------------8행 */
-    #wrap .regular_bg .regular #donation_txt {display: flex; flex-flow: row nowrap; 
-        justify-content: space-between; align-items: flex-end; }
-    #wrap .regular_bg .regular #donation_txt h2 {margin: 0;}
-    #wrap .regular_bg .regular #donation_txt .sponsor_btn {
-    font-size: 1.375rem;
-    } 
-    #wrap .container .sponsor_btn::after {
-        content:'>'; color: white;
-    }
-    #wrap .regular_bg .regular #donation_txt .sponsor_btn em {
-    margin-right: 18px;}
-    #wrap .regular_bg .regular #donation_txt h2 {
-    color: #fff; line-height: 1.2; font-size: 2.5rem;
-    }
-    #wrap .regular_bg {
-        padding:200px 80px;
-    }
-    #wrap .regular_bg .regular #donation_list .donation {
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    #wrap .regular_bg .regular #donation_list {
-    display: grid;
-    grid-template-areas: 
-        'sponser2 sponser3'
-        'sponser4 sponser4';
+    #wrap .activity_bg .activity .details {
+    grid-template-areas:
+        'public nature'
+        'corporation nature';
     grid-template-columns: 1fr 1fr;
     }
-    #wrap .regular_bg .regular #donation_list .donation .photo {
-    height:300px;
+    #wrap .activity_bg .activity .details li {
+        position: relative; padding-bottom: 30px;
     }
-    #wrap .regular_bg .regular #donation_txt h2 {
-    color: #fff; line-height: 1.2; font-size: 1.375rem;}
-    #wrap .guides_bg .guides {padding: 100px 80px;}
+    #wrap .activity_bg .activity .details li .txt {width: 60%;}
+    #wrap .activity_bg .activity .details li:last-child .txt {
+        position: absolute; left: 0; bottom: 30px;
+    }
+    #wrap .activity_bg .activity .details li .txt dt {font-size: 2.13rem; font-weight: 700;}
+    #wrap .activity_bg .activity .details li .txt dd {font-size: 1.25rem;}
+        /* ---------------------------------------------------9행 선물정보 */
+    #wrap .regular_bg .regular {text-align: right;}
+    #wrap .regular_bg .regular .donation_txt {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    #wrap .regular_bg .regular .title h2 {margin: 0;}
+    #wrap .regular_bg .regular .donation_list {
+        grid-template-areas:
+            'sponser2 sponser3'
+            'sponser5 sponser5';
+        grid-template-columns: 1fr 1fr;
+        margin: 40px 0;
+        gap: 45px;
+    }
+    #wrap .regular_bg .regular .donation_list li .photo img {transform: translateY(0);}
+    #wrap .regular_bg .regular .donation_list li .photo {height: 300px;}
+    /* ---------------------------------------------------10행 안내 */
+    #wrap .guides_bg {padding: 100px 80px;}
+}
 /* 1024~ */
 
 @media screen and (min-width:1250px) {
-    #wrap .intro {
-        padding: 447px 335px 100px;
-    }
-    #wrap .container .logo {
-        top: 53px; left: 61px;
-        width: 42px;
-    }
-    #wrap .intro h1 span {
-    font-size: 4.38rem;
-    font-weight: 600;
-    }
-    #wrap .intro h1 span:nth-child(1) {
-        font-weight: 400;
-    }
-    #wrap .intro h1 span:nth-child(2) {
-        font-weight: 700 ;
-    }
-    #wrap .intro .sponsor_btn {
-        width: 409px; height: 71px;
-    }
-    #wrap .intro .sponsor_btn em {font-size: 2.13rem;}
-    #wrap .intro .sponsor_btn::after {font-size: 2rem;}
-    /* =============================== 2행 퀴즈 */
-    #wrap .quiz_bg .quiz .quiz_list {width: 400px;}
-    #wrap .quiz_bg .quiz .quiz_list h1 {
-        font-size: 3.44rem; 
-    }
-    #wrap .quiz_bg .quiz .quiz_list h2 span {
-        font-size: 2.13rem; 
-    }
-    #wrap .quiz_bg .quiz .quiz_list #check_answer {
-    background-color: #050505;
-    border-radius: 50px; 
-    color: #fff;
-    width: 115%;
-    padding: 14px;
-    line-height: 1.7;
-    }
-    #wrap .quiz_bg .quiz .quiz_list {
-    margin-bottom: 16px;
-    }
-    #wrap .quiz_bg .quiz .quiz_list #quiz_frm #quiz_container li label {}
-    /* --------------------------5행 */
-    #wrap .intro {padding:200px 80px;}
-    /* ---------------------------3행~6행 공통 */
-    #wrap .container .contents h1 {font-size: 2.5rem; margin: 0 0 40px;}
-    #wrap .container .contents h1+p {font-size: 1.38rem;}
-    /* ----------------------------3행 */
-    #wrap .video_bg .video h1 {margin:0 0 70px;}
-    #wrap .video_bg .video iframe {height: 484px;}
-    /* ---------------------------5행 */
-    #wrap .humanity_bg .humanity .list {flex-flow: row nowrap;}
-    #wrap .humanity_bg .humanity .list li {flex: 1;}
-    #wrap .humanity_bg .humanity .list li .txt p {font-size: 1rem; line-height: 1.7;}
-    #wrap .humanity_bg .humanity .list li dl dt {
-    color: #fff;
-    font-size: 2.69rem;
-    font-weight: 600;
-    }
-    #wrap .humanity_bg .humanity .list li:nth-child(1) dl {
-        padding-bottom: 182px;
-    }
-    #wrap .humanity_bg .humanity .list li:nth-child(2) dl {
-        padding-bottom: 182px;
-    }
-    #wrap .humanity_bg .humanity .list li:nth-child(3) dl {
-        padding-bottom: 182px;
-    }
-    #wrap .humanity_bg .humanity .list li .txt {height: 250px;}
-    #wrap .container .contents h1+p {margin:0 0 55px; font-size: 1rem;}
-    /* -----------------------------------------------8행 */
-    #wrap .activity_bg .activity .details {
+    #wrap .intro {padding: 447px 0 100px;}
+    #wrap .intro .logo {width: 47px; left: 61px; top: 53px;}
+    #wrap .intro h1 span {font-size: 4.28rem;}
+    #wrap .intro h1 span:nth-child(1) {font-weight: 400;}
+    #wrap .intro h1 span:nth-child(2) {font-weight: 700;}
+    #wrap .container .sponsor_btn {width: 409px; height: 71px;}
+    #wrap .container .sponsor_btn em {font-size: 2.13rem;}
+    #wrap .container .sponsor_btn::after {font-size: 2rem;}
+    /* ---------------------------------------------------2행 퀴즈 */
+    #wrap .quiz_bg {padding: 150px 335px;}
+    #wrap .quiz_bg .quiz .quiz_list h1 {font-size: 3.44rem; margin: 0 0 45px;    }
+    #wrap .quiz_bg .quiz .quiz_list #quiz_frm ul li {margin: 0 0 30px;}
+    #wrap .quiz_bg .quiz .quiz_list #quiz_frm ul li:last-child {margin: 0 0 40px;}
+    /* ---------------------------------------------------3행~6행 공통 */
+    #wrap .container .contents h1 {font-size: 3.43rem; margin: 0 0 81px;}
+    #wrap .container .contents h1+p {margin: 0 0 81px;}
+    /* ---------------------------------------------------3행 영상 */
+    #wrap .video_bg .video iframe {height: 600px;}
+    /* ---------------------------------------------------5행 인류재앙 */
+    #wrap .humanity_bg .humanity h1+p {font-size: 1.25rem;}
+    #wrap .humanity_bg .humanity .list li dl dt {font-size: 2.69rem;}
+    #wrap .humanity_bg .humanity .list li .txt p {font-size: 1.25rem;}
+    /* ---------------------------------------------------9행 선물정보 */
+    #wrap .regular_bg .regular {text-align: center;}
+    #wrap .regular_bg .regular .donation_list {
         grid-template-areas: 
-        'public nature'
-        'corporation nature';
-        grid-template-columns: 1fr 1fr;
+        'sponser2 sponser3 sponser5';
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 70px 0;
     }
-    #wrap .activity_bg .activity .details li {
-        background-position: center;
-        background-size: cover;
-        position: relative ;  
-        padding-bottom: 30px;
-    }
-    #wrap .activity_bg .activity .details li:last-child .txt {position: absolute; left: 0; bottom:31px ;}
-    #wrap .activity_bg {
-        
-    }
-    #wrap .activity_bg .activity .details .txt {
-        background: linear-gradient(rgba(0, 0, 0, 0.452)) transparent;
-        width: 50%;
-    }
-    #wrap .activity_bg .activity .details .txt dt {font-size: 2.13rem; margin-bottom: 18px; color: #fff;}
-    #wrap .activity_bg .activity .details .txt dd {font-size: 0.813rem; color: #fff; line-height: 1.7;}
-        #wrap .regular_bg .regular #donation_list {
-    display: grid;
-    grid-template-areas: 
-        'sponser2 sponser3 sponser4';
-    grid-template-columns: 1fr 1fr 1fr;
-    }
-    #wrap .regular_bg .regular #donation_list .donation .photo {
-    transform: translateY(0);
-    }
-    #wrap .guides_bg .guides {padding: 335px 100px;}
-    #wrap .guides_bg .guides h2 {font-size: 2.13rem; font-weight: 600; padding-bottom: 10px;}
-    #wrap .guides_bg .guides ul li {font-size: 1.25rem; line-height:1.7;}
-}
+    #wrap .regular_bg .regular .donation_list li h3,
+    #wrap .regular_bg .regular .donation_list li h3+p {font-size: 1.13rem;}
+    #wrap .regular_bg .regular .info {font-size: 1.13rem;}
+    /* ---------------------------------------------------10행 안내 */
+    #wrap .guides_bg {padding: 100px 335px;}
+    #wrap .guides_bg .guides dl dt {font-size: 2.13rem;}
+    #wrap .guides_bg .guides dl dd {font-size: 1.25rem;}
     /* 1250~max */
+}
 /* background image 키우면 label(인라인)도 같이 키워서 line-height등으로
 키워도 잘리지 않게 */
